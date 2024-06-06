@@ -1,15 +1,14 @@
 // Express automatically knows that this entire function is an error handling middleware by specifying 4 parameters
-const handleError = (err: any, req: any, res: any, next: any) => {
-    err.statusCode = err.statusCode || 500;
-    err.status = err.status || 'error';
+const handleError = (err: any, _: any, res: any) => {
+  err.statusCode = err.statusCode || 500;
+  err.status = err.status || 'error';
 
-    res.status(err.statusCode).json({
-        status: err.status,
-        error: err,
-        message: err.message,
-        stack: err.stack
-    });
-
+  res.status(err.statusCode).json({
+    status: err.status,
+    error: err,
+    message: err.message,
+    stack: err.stack,
+  });
 };
 
-export default handleError
+export default handleError;

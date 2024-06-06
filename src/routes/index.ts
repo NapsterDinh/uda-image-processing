@@ -1,8 +1,8 @@
-import express from 'express'
-import ImageProcessingRoutes from "./ImageProcessingRoute"
+import express from 'express';
+import ImageProcessingRoutes from './ImageProcessingRoute';
 
 const router = express.Router();
 
-router.use("/images", ImageProcessingRoutes);
+router.use('/images', ImageProcessingRoutes);
 
-export default router
+export default router;

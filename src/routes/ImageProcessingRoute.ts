@@ -1,8 +1,8 @@
-import express from 'express'
-import ImageProcessingController from "../controllers/ImageProcessingController"
+import express from 'express';
+import ImageProcessingController from '../controllers/ImageProcessingController';
 
 const imageProcessingRouter = express.Router();
 
-imageProcessingRouter.get("/", ImageProcessingController.getImage);
+imageProcessingRouter.get('/', ImageProcessingController.getImage);
 
-export default imageProcessingRouter
+export default imageProcessingRouter;
